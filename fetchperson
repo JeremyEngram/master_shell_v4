@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Prompt the user for input
+read -p "Enter the first name: " first_name
+read -p "Enter the last name: " last_name
+read -p "Enter the city: " city
+read -p "Enter the state: " state
+
+# Construct the URL
+url="https://www.usa-people-search.com/name/$first_name-$last_name/$city-$state"
+
+# Fetch and display the results
+echo "Fetching results from: $url"
+echo
+
+curl -s "$url"
